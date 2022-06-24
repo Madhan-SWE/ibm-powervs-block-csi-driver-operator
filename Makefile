@@ -39,14 +39,7 @@ GO_TEST_PACKAGES :=./pkg/... ./cmd/...
 #
 # Example:
 #   make test-e2e
-#test-e2e:
-#	hack/e2e.sh
-#.PHONY: test-e2e
+test-e2e:
+	hack/e2e.sh
 
-# TODO: add update-bundle for OLM metadata
-# update: update-bundle
-# .PHONY: update
-#
-#update-bundle:
-#	MINORVERSION=$(MINORVERSION) hack/update-bundle.sh
-#.PHONY: update-bundle
+.PHONY: test-e2e
